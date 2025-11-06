@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tracking - UNIV PELITA BANGSA BOOKSTORE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">UNIV PELITA BANGSA <span>BookStore</span></h1>
+      <nav aria-label="Main navigation">
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+        <a class="nav-link" href="stok.html">Katalog</a>
+        <a class="nav-link" href="checkout.html">Pemesanan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" aria-labelledby="trackTitle">
+      <h2 id="trackTitle">Tracking Pengiriman</h2>
+
+      <form id="trackForm" class="inline-form" novalidate>
+        <label for="doNumber" class="visually-hidden">Nomor DO</label>
+        <input id="doNumber" placeholder="Masukkan Nomor Delivery Order (mis. 20230012)" required>
+        <button class="btn" type="submit">Cari</button>
+      </form>
+
+      <div id="trackResult" class="track-result" aria-live="polite">
+        <!-- hasil pencarian muncul di sini -->
+      </div>
+    </section>
+  </main>
+
+  <script src="java/js/data.js"></script>
+  <script src="java/js/main .js"></script>
+</body>
+</html>

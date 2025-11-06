@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pemesanan - UNIV PELITA BANGSA BOOKSTORE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">UNIV PELITA BANGSA <span>BOOKSTORE</span></h1>
+      <nav aria-label="Main navigation">
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+        <a class="nav-link" href="stok.html">Katalog</a>
+        <a class="nav-link" href="tracking.html">Tracking</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" aria-labelledby="checkoutTitle">
+      <h2 id="checkoutTitle">Form Pemesanan</h2>
+
+      <form id="checkoutForm" class="stack" novalidate>
+        <fieldset>
+          <legend>Informasi Pemesan</legend>
+          <label for="custName">Nama Pemesan</label>
+          <input id="custName" required>
+          <label for="custEmail">Email</label>
+          <input id="custEmail" type="email" required>
+          <label for="custPhone">No. HP</label>
+          <input id="custPhone" type="tel" required>
+          <label for="custAddress">Alamat</label>
+          <textarea id="custAddress" rows="3" required></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Pesanan</legend>
+          <label for="bookSelect">Pilih Buku</label>
+          <select id="bookSelect"></select>
+
+          <label for="qty">Jumlah</label>
+          <input id="qty" type="number" min="1" value="1" required>
+          <div class="inline">
+            <button id="addToCart" type="button" class="btn">Tambah ke Keranjang</button>
+            <button id="clearCart" type="button" class="btn ghost">Kosongkan</button>
+          </div>
+
+          <div id="cartArea" class="cart-area" aria-live="polite">
+            <p class="muted">Keranjang kosong.</p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Pembayaran & Pengiriman</legend>
+          <label for="shipMethod">Metode Pengiriman</label>
+          <select id="shipMethod">
+            <option>JNE - Reguler</option>
+            <option>Pos Indonesia</option>
+          </select>
+
+          <label for="payment">Metode Pembayaran</label>
+          <select id="payment">
+            <option>Transfer Bank</option>
+            <option>COD</option>
+          </select>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Checkout</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="java/js/data.js"></script>
+  <script src="java/js/main .js"></script>
+</body>
+</html>

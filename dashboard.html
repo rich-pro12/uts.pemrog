@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard - UNIV PELITA BANGSA BOOKSTORE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">UNIV PELITA BANGSA <span>BookStore</span></h1>
+      <nav aria-label="Main navigation">
+        <a class="nav-link" href="stok.html">Katalog</a>
+        <a class="nav-link" href="checkout.html">Pemesanan</a>
+        <a class="nav-link" href="tracking.html">Tracking</a>
+        <a class="nav-link" href="login.html">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card hero" aria-labelledby="heroTitle">
+      <h2 id="heroTitle" class="greeting">Halo!</h2>
+      <p id="greetingText">Selamat datang di dashboard UNIV PELITA BANGSA</p>
+
+      <div class="dashboard-grid">
+        <a class="dash-card" href="stok.html" aria-label="Informasi Stok">
+          <h3>Katalog Buku</h3>
+          <p>Lihat semua stok dan tambahkan buku baru</p>
+        </a>
+
+        <a class="dash-card" href="tracking.html" aria-label="Tracking">
+          <h3>Tracking Pengiriman</h3>
+          <p>Periksa status pengiriman berdasarkan nomor DO</p>
+        </a>
+
+        <a class="dash-card" href="checkout.html" aria-label="Laporan">
+          <h3>Pemesanan & Checkout</h3>
+          <p>Kelola pemesanan pelanggan</p>
+        </a>
+
+        <a class="dash-card" href="stok.html" aria-label="History">
+          <h3>History Transaksi</h3>
+          <p>Riwayat pembelian (simulasi)</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 UNIV PELITA BANGSA — UTS Pemrograman Web</p>
+    </div>
+  </footer>
+
+  <script src="java/js/main .js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - UNIV PELITA BANGSA BOOKSTORE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">UNIV PELITA BANGSA <span>BOOKSTORE</span></h1>
+      <nav aria-label="Main navigation">
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-card" id="main">
+    <section aria-labelledby="login-title" class="card">
+      <h2 id="login-title">Masuk ke UNIV PELITA BANGSA BOOKSTORE</h2>
+
+      <form id="loginForm" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="email@contoh.com" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="*******" required minlength="4">
+
+        <div class="actions">
+          <button type="submit" class="btn">Login</button>
+          <button type="button" id="openRegister" class="btn ghost">Daftar</button>
+          <button type="button" id="openForgot" class="btn ghost">Lupa Password</button>
+        </div>
+      </form>
+      <p class="muted">Gunakan akun di <strong>data.js</strong> untuk login (mis. rina@gmail.com / rina123).</p>
+    </section>
+  </main>
+
+  <!-- Modal: Register -->
+  <div class="modal" id="modalRegister" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="regTitle">
+      <button class="modal-close" data-close>&times;</button>
+      <h3 id="regTitle">Daftar Akun Baru</h3>
+      <form id="registerForm" class="modal-form" novalidate>
+        <label for="regName">Nama</label>
+        <input id="regName" required>
+        <label for="regEmail">Email</label>
+        <input id="regEmail" type="email" required>
+        <label for="regPassword">Password</label>
+        <input id="regPassword" type="password" required minlength="4">
+        <label for="regRole">Role</label>
+        <select id="regRole">
+          <option>User</option>
+          <option>Admin</option>
+        </select>
+        <div class="actions">
+          <button type="submit" class="btn">Daftar</button>
+          <button type="button" class="btn ghost" data-close>Batal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Forgot -->
+  <div class="modal" id="modalForgot" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="forgotTitle">
+      <button class="modal-close" data-close>&times;</button>
+      <h3 id="forgotTitle">Lupa Password</h3>
+      <form id="forgotForm" class="modal-form" novalidate>
+        <label for="forgotEmail">Masukkan email terdaftar</label>
+        <input id="forgotEmail" type="email" required>
+        <div class="actions">
+          <button type="submit" class="btn">Kirim Link Reset (simulasi)</button>
+          <button type="button" class="btn ghost" data-close>Batal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="java/js/data.js"></script> <!-- data file (sudah ada) -->
+  <script src="java/js/main .js"></script>
+</body>
+</html>

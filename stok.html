@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stok / Katalog - UNIV PELITA BANGSA BOOKSTORE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">UNIV PELITA BANGSA <span>BOOKSTORE</span></h1>
+      <nav aria-label="Main navigation">
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+        <a class="nav-link" href="checkout.html">Pemesanan</a>
+        <a class="nav-link" href="tracking.html">Tracking</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" aria-labelledby="stokTitle">
+      <h2 id="stokTitle">Katalog Buku</h2>
+
+      <div class="table-toolbar">
+        <form id="addRowForm" class="inline-form" novalidate>
+          <input id="kodeBarang" placeholder="Kode" required>
+          <input id="namaBarang" placeholder="Nama Buku" required>
+          <input id="jenisBarang" placeholder="Jenis" required>
+          <input id="edisi" placeholder="Edisi" required>
+          <input id="stok" type="number" placeholder="Stok" required>
+          <input id="harga" placeholder="Harga" required>
+          <button class="btn" type="submit">Tambah</button>
+        </form>
+      </div>
+
+      <div class="table-wrap" role="region" aria-labelledby="stokTitle">
+        <table id="catalogTable" class="catalog-table">
+          <thead>
+            <tr>
+              <th>Kode</th>
+              <th>Cover</th>
+              <th>Nama Buku</th>
+              <th>Jenis</th>
+              <th>Edisi</th>
+              <th>Stok</th>
+              <th>Harga</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- rows will be added by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="java/js/data.js"></script>
+  <script src="java/js/main .js"></script>
+</body>
+</html>
